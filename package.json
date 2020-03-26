@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tailwind": "tailwindcss build ./src/tailwind.build.css -o ./build/tailwind.css",
-    "build": "npm run tailwind",
-    "webpack": "webpack --mode production",
-    "dev": "webpack-dev-server --mode=development --config webpack.config.js"
+    "build": "npm run tailwind && webpack --mode production",
+    "watch:webpack": "webpack --mode development",
+    "live": "concurrently \"npm run tailwind\" \"npm run watch:webpack\" \"live-server dist/\""
   },
   "repository": {
     "type": "git",
@@ -23,14 +23,14 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "babel-loader": "^8.1.0",
+    "concurrently": "^5.1.0",
     "css-loader": "^3.4.2",
     "html-webpack-plugin": "^4.0.1",
     "postcss": "^7.0.27",
     "postcss-loader": "^3.0.0",
     "tailwindcss": "^1.2.0",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {}
 }
