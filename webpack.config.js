@@ -10,8 +10,7 @@ module.exports = function(_env, argv) {
     watch: isDevelopment,
     output: {
       path: path.resolve(__dirname, "dist"),
-      filename: "build.js",
-      publicPath: "/dist"
+      filename: "dist.js"
     },
     optimization: {
       minimize: isProduction
@@ -29,19 +28,7 @@ module.exports = function(_env, argv) {
           test: /\.js$/,
           use: ["babel-loader"]
         },
-        {
-          test: /\.css$/,
-          use: [
-            "style-loader",
-            {
-              loader: "css-loader",
-              options: {
-                importLoaders: 1
-              }
-            },
-            "postcss-loader"
-          ]
-        }
+        { test: /\.styl$/, loader: "style-loader!css-loader!stylus-loader" }
       ]
     },
     devServer: {

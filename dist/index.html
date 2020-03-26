@@ -7,32 +7,49 @@
     <link rel="stylesheet" href="tailwind.css" />
   </head>
   <body>
-    <div class="max-w-screen-xl mx-auto">
+    <div class="max-w-screen-xl mx-auto  pt-24">
       <nav
         class="relative flex items-center justify-between sm:h-10 lg:justify-start"
       >
-        <div class="hidden md:block md:ml-10 md:pr-4">
+        <div class="flex items-baseline">
           <a
             href="#"
-            class="font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+            class="font-bold focus:outline-none transition duration-150 ease-in-out text-2xl"
             >surchy</a
           >
           <a
             href="https://github.com/wfowl/surchy"
-            class="ml-8 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out"
+            target="_blank"
+            class="text-xl ml-8 font-thin hover:text-gray-900 focus:outline-none focus:text-gray-900 transition duration-150 ease-in-out items-center"
             >github</a
           >
         </div>
       </nav>
+      <div class="pt-24 flex items-top justify-around">
+        <div class="animated fadeInUp delay-1s">
+          <h1
+            class="font-bold focus:outline-none transition duration-150 ease-in-out text-4xl mt-16"
+          >
+            surchy
+          </h1>
+          <h2 class="font-thin text-3xl">search for text files</h2>
+
+          <p>
+            surchy is the dead simple search utility for utf8 encoded files.
+            <br />
+            that's pretty much all it does.<br />
+            <br />
+            it's free, check it out.
+          </p>
+        </div>
+        <div class=" fadeInUp ">
+          <img
+            src="surchy_app_preview.png"
+            alt="surchy app preview"
+            class="shadow-2xl max-w-sm"
+          />
+        </div>
+      </div>
     </div>
-    <div>
-      <h1>test</h1>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam ut
-        dignissimos quaerat praesentium sapiente, eos ullam doloribus ipsam
-        fuga, blanditiis numquam a et asperiores id rerum, ipsa similique
-        suscipit? Odit!
-      </p>
-    </div>
-  <script src="/dist/build.js"></script></body>
+  <script src="dist.js"></script></body>
 </html>
