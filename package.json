@@ -28,7 +28,7 @@
     "css-loader": "^3.4.2",
     "html-webpack-plugin": "^4.0.1",
     "live-server": "^1.2.1",
-    "postcss": "^7.0.27",
+    "postcss": "^8.2.10",
     "postcss-loader": "^3.0.0",
     "raw": "^0.1.4",
     "style-loader": "^1.1.3",
